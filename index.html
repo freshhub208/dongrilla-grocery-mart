@@ -1,343 +1,337 @@
-45<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dongrilla Grocery Mart</title>
-
-<style>
-body{
-font-family:Arial,sans-serif;
-margin:0;
-padding:0;
-background:#f8fafc;
-color:#1f2937;
-}
-
-
-header{
-background: linear-gradient(90deg,#ff6b00,#ff9900);
-color:white;
-padding:20px 15px;
-text-align:center;
-border-radius:10px;
-}
-header h1{
-margin:0;
-font-size:25px;
-}
-
-.banner{
-background:#15803d;
-color:white;
-padding:22px 15px;
-text-align:center;
-font-size:22px;
-font-weight:bold;
-}
-
-.search{
-padding:15px;
-text-align:center;
-background:white;
-}
-
-.search input{
-width:85%;
-padding:14px;
-border-radius:25px;
-border:2px solid #ff9900;
-font-size:16px;
-outline:none;
-box-shadow:0 3px 8px rgba(0,0,0,0.1);
-}
-
-.categories{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:15px;
-}
-
-.card{
-background:white;
-padding:25px 15px;
-text-align:center;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.12);
-font-size:17px;
-font-weight:bold;
-transition:all 0.3s ease;
-border:1px solid #f1f5f9;
-}
-
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 25px rgba(0,0,0,0.18);
-}
-
-button{
-background:linear-gradient(90deg,#ff6b00,#ff9900);
-color:white;
-border:none;
-padding:14px 25px;
-border-radius:25px;
-font-size:17px;
-font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
-cursor:pointer;
-}
-
-button:hover{
-opacity:0.9;
-}
-
-.order{
-text-align:center;
-padding:20px;
-}
-
-.offer{
-margin:15px;
-background:linear-gradient(90deg,#ff6b00,#ff9900);
-color:white;
-padding:20px;
-border-radius:15px;
-text-align:center;
-font-weight:bold;
-font-size:18px;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
-}
-
-footer{
-background:red;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:30px;
-font-size:20px;
-font-weight:bold;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dongrila Grocery Mart - Fresh from Nature</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: { 50: '#f0fdf4', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 900: '#14532d' },
+                        earth: { 800: '#292524', 900: '#1c1917' }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-<body>
-
-<header>
-<h1>Dongrilla Grocery Mart</h1>
-</header>
-
-<style>
-body{
-font-family:Arial,sans-serif;
-margin:0;
-padding:0;
-background:#f8fafc;
-color:#1f2937;
-}
-
-header{
-background:#16a34a;
-color:white;
-padding:18px 15px;
-text-align:center;
-}
-
-header h1{
-margin:0;
-font-size:25px;
-}
-
-.banner{
-background:#15803d;
-color:white;
-padding:22px 15px;
-text-align:center;
-font-size:22px;
-font-weight:bold;
-}
-
-.search{
-padding:15px;
-text-align:center;
-background:white;
-}
-
-.search input{
-width:85%;
-padding:13px;
-border-radius:10px;
-border:1px solid #d1d5db;
-font-size:16px;
-}
-
-.categories{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:15px;
-}
-
-.card{
-background:white;
-padding:22px 10px;
-text-align:center;
-border-radius:12px;
-box-shadow:0 2px 6px rgba(0,0,0,0.12);
-font-size:17px;
-font-weight:bold;
-}
-
-button{
-background:#16a34a;
-color:white;
-border:none;
-padding:13px 25px;
-border-radius:8px;
-font-size:17px;
-font-weight:bold;
-}
-
-button:hover{
-background:#15803d;
-}
-
-.order{
-text-align:center;
-padding:20px;
-}
-
-.offer{
-margin:15px;
-background:#f59e0b;
-color:white;
-padding:18px;
-border-radius:12px;
-text-align:center;
-font-weight:bold;
-}
-.section-title{
-padding:18px 15px 5px;
-font-size:21px;
-font-weight:bold;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:15px;
-}
-
-.product{
-background:white;
-padding:15px 10px;
-text-align:center;
-border-radius:12px;
-box-shadow:0 2px 6px rgba(0,0,0,0.12);
-}
-
-.product-icon{
-font-size:45px;
-margin-bottom:8px;
-}
-
-.product h3{
-margin:8px 0;
-font-size:17px;
-}
-
-.product p{
-margin:8px 0 12px;
-font-weight:bold;
-color:#16a34a;
-}
-
-.product button{
-padding:10px 15px;
-font-size:14px;
-}
-footer{
-background:#166534;
-color:white;
-text-align:center;
-padding:18px;
-margin-top:20px;
-}
-</style>
-    
-    <div class="banner">
-🎉 Daily Offers Available 🎉
-</div>
-
-<div class="search">
-<input type="text" placeholder="Search products...">
-</div>
-
-<div class="categories">
-
-<div class="card">🥦 Grocery</div>
-
-<div class="card">🥤 Beverages</div>
-
-<div class="card">🎂 Cakes</div>
-
-<div class="card">🧁 Pastries</div>
-
-<div class="card">🍕 Food</div>
-
-<div class="card">🔥 Special Offers</div>
-
-</div>
-
-<div class="order">
-<button>Order Now</button>
-</div>
-
-    <div class="section-title">
-🛍️ Popular Products
-</div>
-
-<div class="products">
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=300"
-alt="Fresh Milk"
-class="product-img">
-<h3>Fresh Milk</h3>
-<p>₹60 / 1 Litre</p>
-<button>Add to Cart</button>
-</div>
-
-<div class="product">
-<div class="product-icon">🍞</div>
-<h3>Fresh Bread</h3>
-<p>₹40 / Pack</p>
-<button>Add to Cart</button>
-</div>
-
-<div class="product">
-<div class="product-icon">🥚</div>
-<h3>Eggs</h3>
-<p>₹70 / 12 Eggs</p>
-<button>Add to Cart</button>
-</div>
-
-<div class="product">
-<div class="product-icon">🍎</div>
-<h3>Fresh Apples</h3>
-<p>₹120 / Kg</p>
-<button>Add to Cart</button>
-</div>
-
+    <!-- Top Announcement Bar -->
+    <div class="bg-forest-900 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        🌿 Superfast 15-Minute Grocery Delivery | Use Code: <span class="bg-forest-700 px-2 py-0.5 rounded text-yellow-300 font-bold">GORILLA20</span> for 20% OFF!
     </div>
 
-      <!-- baaki website code -->
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <div class="w-12 h-12 bg-forest-600 rounded-xl flex items-center justify-center text-white text-2xl shadow-md">
+                    🦍
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-tight text-forest-900">DONGRILA</span>
+                    <span class="block text-xs font-semibold tracking-widest text-forest-600 uppercase">Grocery Mart</span>
+                </div>
+            </div>
 
-<footer>
-  © 2026 Dongrilla Grocery Mart. All Rights Reserved.
-</footer>
+            <!-- Search Bar -->
+            <div class="hidden md:flex flex-1 max-w-lg mx-8">
+                <div class="relative w-full">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" placeholder="Search for fresh veggies, fruits, milk, snacks..." class="w-full pl-11 pr-4 py-3 bg-gray-100 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-500 focus:bg-white transition">
+                </div>
+            </div>
 
+            <!-- Actions -->
+            <div class="flex items-center space-x-6">
+                <button onclick="toggleCart()" class="relative flex items-center space-x-2 bg-forest-50 hover:bg-forest-100 text-forest-700 px-4 py-2.5 rounded-xl font-semibold transition">
+                    <i class="fa-solid fa-basket-shopping text-lg"></i>
+                    <span class="hidden sm:inline">Cart</span>
+                    <span id="cartCount" class="bg-forest-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">0</span>
+                </button>
+                <div class="hidden lg:flex items-center space-x-2 border-l pl-6 border-gray-200">
+                    <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 font-bold">
+                        👤
+                    </div>
+                    <div class="text-left text-xs">
+                        <p class="text-gray-500">Hello,</p>
+                        <p class="font-bold text-gray-800">My Account</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-gradient-to-r from-forest-900 via-forest-800 to-emerald-900 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden shadow-xl flex flex-col md:flex-row items-center justify-between">
+            <div class="relative z-10 max-w-xl">
+                <span class="bg-emerald-500/30 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-400/30">🦍 Fresh From The Jungle</span>
+                <h1 class="text-3xl sm:text-5xl font-black mt-4 leading-tight">Wildly Fresh Groceries Delivered Fast.</h1>
+                <p class="text-gray-200 mt-3 text-sm sm:text-base">Get organic fruits, farm-fresh dairy, and daily essentials delivered right to your doorstep at unbeatable prices.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#shop" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">Shop Now</a>
+                    <a href="#deals" class="bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-xl backdrop-blur-md transition">Today's Deals</a>
+                </div>
+            </div>
+            <div class="mt-8 md:mt-0 relative z-10 text-8xl sm:text-9xl">
+                🍌🦍🛒
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl sm:text-2xl font-black text-gray-900">Explore Categories</h2>
+            <a href="#" class="text-forest-600 font-semibold text-sm hover:underline">View All &rarr;</a>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition cursor-pointer group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">🍎</div>
+                <h3 class="font-bold text-gray-800 text-sm">Fruits & Veg</h3>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition cursor-pointer group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">🥛</div>
+                <h3 class="font-bold text-gray-800 text-sm">Dairy & Eggs</h3>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition cursor-pointer group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">🥖</div>
+                <h3 class="font-bold text-gray-800 text-sm">Bakery</h3>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition cursor-pointer group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">🥤</div>
+                <h3 class="font-bold text-gray-800 text-sm">Beverages</h3>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition cursor-pointer group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">🍿</div>
+                <h3 class="font-bold text-gray-800 text-sm">Snacks</h3>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 text-center hover:shadow-md transition cursor-pointer group">
+                <div class="text-4xl mb-2 group-hover:scale-110 transition">🧼</div>
+                <h3 class="font-bold text-gray-800 text-sm">Household</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="shop" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-xl sm:text-2xl font-black text-gray-900 mb-6">Featured Gorilla Picks</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <div class="bg-gray-100 rounded-xl h-44 flex items-center justify-center text-6xl relative">
+                        🍌
+                        <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded-lg">15 MINS</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-xs text-gray-400 font-semibold uppercase">Fruits</span>
+                        <h3 class="font-bold text-gray-800 text-base mt-1">Organic Cavendish Bananas</h3>
+                        <p class="text-xs text-gray-500 mt-1">1 Dozen (approx. 500g)</p>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-lg font-black text-gray-900">₹60</span>
+                        <span class="text-xs text-gray-400 line-through ml-1">₹80</span>
+                    </div>
+                    <button onclick="addToCart('Organic Cavendish Bananas', 60)" class="bg-forest-600 hover:bg-forest-700 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-sm transition">
+                        + Add
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <div class="bg-gray-100 rounded-xl h-44 flex items-center justify-center text-6xl relative">
+                        🥑
+                        <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded-lg">FRESH</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-xs text-gray-400 font-semibold uppercase">Exotic</span>
+                        <h3 class="font-bold text-gray-800 text-base mt-1">Hass Avocados</h3>
+                        <p class="text-xs text-gray-500 mt-1">Pack of 2 ripe pieces</p>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-lg font-black text-gray-900">₹199</span>
+                        <span class="text-xs text-gray-400 line-through ml-1">₹250</span>
+                    </div>
+                    <button onclick="addToCart('Hass Avocados', 199)" class="bg-forest-600 hover:bg-forest-700 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-sm transition">
+                        + Add
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <div class="bg-gray-100 rounded-xl h-44 flex items-center justify-center text-6xl relative">
+                        🥛
+                        <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded-lg">DAIRY</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-xs text-gray-400 font-semibold uppercase">Dairy</span>
+                        <h3 class="font-bold text-gray-800 text-base mt-1">Fresh Farm Cow Milk</h3>
+                        <p class="text-xs text-gray-500 mt-1">1 Litre Packet</p>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-lg font-black text-gray-900">₹68</span>
+                    </div>
+                    <button onclick="addToCart('Fresh Farm Cow Milk', 68)" class="bg-forest-600 hover:bg-forest-700 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-sm transition">
+                        + Add
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                    <div class="bg-gray-100 rounded-xl h-44 flex items-center justify-center text-6xl relative">
+                        🥥
+                        <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded-lg">ORGANIC</span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-xs text-gray-400 font-semibold uppercase">Beverages</span>
+                        <h3 class="font-bold text-gray-800 text-base mt-1">Tender Coconut Water</h3>
+                        <p class="text-xs text-gray-500 mt-1">500ml Bottle</p>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center justify-between">
+                    <div>
+                        <span class="text-lg font-black text-gray-900">₹50</span>
+                    </div>
+                    <button onclick="addToCart('Tender Coconut Water', 50)" class="bg-forest-600 hover:bg-forest-700 text-white px-4 py-2 rounded-xl text-xs font-bold shadow-sm transition">
+                        + Add
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cart Slide-over Drawer -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <div class="p-6 border-b flex items-center justify-between bg-forest-900 text-white">
+                    <h2 class="text-lg font-bold flex items-center gap-2">🦍 Your Gorilla Basket</h2>
+                    <button onclick="toggleCart()" class="text-white hover:text-gray-300 text-xl font-bold">&times;</button>
+                </div>
+                <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-4">
+                    <p class="text-gray-400 text-center py-12">Your cart is currently empty.</p>
+                </div>
+                <div class="p-6 border-t bg-gray-50">
+                    <div class="flex justify-between mb-4 font-bold text-gray-800">
+                        <span>Total:</span>
+                        <span id="cartTotal">₹0</span>
+                    </div>
+                    <button onclick="checkout()" class="w-full bg-forest-600 hover:bg-forest-700 text-white py-3 rounded-xl font-bold shadow transition">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 mt-16 py-8 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Dongrila Grocery Mart. All rights reserved. Built with wild speed 🦍.</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        let cart = [];
+
+        function toggleCart() {
+            const drawer = document.getElementById('cartDrawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        function addToCart(name, price) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCartUI();
+            toggleCart();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cartItems');
+            const countBadge = document.getElementById('cartCount');
+            const totalElement = document.getElementById('cartTotal');
+
+            let totalCount = 0;
+            let totalPrice = 0;
+
+            if (cart.length === 0) {
+                container.innerHTML = '<p class="text-gray-400 text-center py-12">Your cart is currently empty.</p>';
+                countBadge.innerText = '0';
+                totalElement.innerText = '₹0';
+                return;
+            }
+
+            container.innerHTML = '';
+            cart.forEach((item, index) => {
+                totalCount += item.qty;
+                totalPrice += item.price * item.qty;
+
+                container.innerHTML += `
+                    <div class="flex items-center justify-between bg-gray-50 p-3 rounded-xl">
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">${item.name}</h4>
+                            <p class="text-xs text-gray-500">₹${item.price} × ${item.qty}</p>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button onclick="changeQty(${index}, -1)" class="w-7 h-7 bg-gray-200 rounded-lg font-bold text-sm">-</button>
+                            <span class="text-sm font-bold">${item.qty}</span>
+                            <button onclick="changeQty(${index}, 1)" class="w-7 h-7 bg-forest-600 text-white rounded-lg font-bold text-sm">+</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            countBadge.innerText = totalCount;
+            totalElement.innerText = `₹${totalPrice}`;
+        }
+
+        function changeQty(index, delta) {
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            alert('Order placed successfully! Gorilla delivery partner is on the way 🦍🚀');
+            cart = [];
+            updateCartUI();
+            toggleCart();
+        }
+    </script>
 </body>
 </html>
 
