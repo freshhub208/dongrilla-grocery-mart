@@ -158,7 +158,7 @@ footer{
   
 .grocery-section{
   width:100%;
-  padding:15px;
+  padding:10px;
   box-sizing:border-box;
 }
 
@@ -183,6 +183,7 @@ footer{
   box-sizing:border-box;
   box-shadow:0 0 15px rgba(255,153,0,0.3);
   overflow:hidden;
+  animation:floatBox 3s infinite ease-in-out;
 }
 
 .grocery-category h3{
@@ -193,8 +194,8 @@ footer{
 .grocery-items{
   width:100%;
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:10px;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
   box-sizing:border-box;
 }
 
@@ -251,62 +252,23 @@ footer{
 .grocery-item img{
   max-width:100%;
 }
-  
-  .grocery-category{
-  background:#1e1e1e;
-  margin:15px;
-  padding:15px;
-  border-radius:15px;
-  box-shadow:0 0 15px rgba(255,153,0,0.3);
-  transition:0.4s;
-  animation:floatBox 3s infinite ease-in-out;
-}
 
 .grocery-category:hover{
   transform:scale(1.03);
 }
 
-.grocery-category h3{
-  color:#ff9900;
-  margin-bottom:10px;
-}
-
-.grocery-items div{
-  background:#2c2c2c;
-  margin:6px 0;
-  padding:10px;
-  border-radius:10px;
-  transition:0.3s;
-}
-
-.grocery-items div:hover{
-  transform:translateX(10px);
-  background:#ff6b00;
-}
-
 @keyframes floatBox{
-  0%{transform:translateY(0);}
-  50%{transform:translateY(-5px);}
-  100%{transform:translateY(0);}
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-4px);
+  }
+  100%{
+    transform:translateY(0);
+  }
 }
 
- .product-image{
-  width:100%;
-  max-width:100%;
-  height:160px;
-  object-fit:contain;
-  display:block;
-  margin:0 auto 12px;
-  border-radius:12px;
-  box-sizing:border-box;
-}
-
-.grocery-item{
-  width:100%;
-  max-width:100%;
-  overflow:hidden;
-  box-sizing:border-box;
-} 
 </style>
 </head>
 
